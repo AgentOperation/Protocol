@@ -1,14 +1,14 @@
-# AOP v1.0 Compliance Badge
+# AOP v0.5 Compliance Badge
 
-Add this to your project's README to declare AOP v1.0 compliance:
+Add this to your project's README to declare AOP v0.5 compliance:
 
 ```markdown
-[![AOP v1.0 Compliant](https://img.shields.io/badge/AOP-v1.0%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v1.0)
+[![AOP v0.5 Compliant](https://img.shields.io/badge/AOP-v0.5%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v0.5)
 ```
 
 Renders as:
 
-[![AOP v1.0 Compliant](https://img.shields.io/badge/AOP-v1.0%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v1.0)
+[![AOP v0.5 Compliant](https://img.shields.io/badge/AOP-v0.5%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v0.5)
 
 ## What compliance means
 

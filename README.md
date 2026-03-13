@@ -1,7 +1,7 @@
 # Agent Operation Protocol (AOP)
 
-[![AOP v1.0](https://img.shields.io/badge/AOP-v1.0-blue?style=flat-square)](https://agentoperationprotocol.org/v1.0)
-[![Status: Draft](https://img.shields.io/badge/status-draft-yellow?style=flat-square)](https://agentoperationprotocol.org/v1.0)
+[![AOP v0.5](https://img.shields.io/badge/AOP-v0.5-blue?style=flat-square)](https://agentoperationprotocol.org/v0.5)
+[![Status: Draft](https://img.shields.io/badge/status-draft-yellow?style=flat-square)](https://agentoperationprotocol.org/v0.5)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 
 **AOP is an open behavioral protocol for actors operating in shared operational graphs.**
@@ -21,13 +21,13 @@ It defines six laws that any conformant actor — human, AI agent, automation sy
 
 | Version | Date | Status | URL |
 |---------|------|--------|-----|
-| 1.0 | 2026-03-12 | Draft | [/v1.0/spec.md](./v1.0/spec.md) |
+| 0.5 | 2026-03-12 | Draft | [/v0.5/spec.md](./v0.5/spec.md) |
 
 ## Claiming Compliance
 
 A system claiming AOP conformance should:
 
-1. Reference this document and version (AOP v1.0) in its architecture documentation.
+1. Reference this document and version (AOP v0.5) in its architecture documentation.
 2. Document how each of the six laws is enforced at its API boundary.
 3. Document its rejection response schema aligned with AOP rejection semantics.
 4. Identify the audit log mechanism used to record governance rejections.
@@ -35,12 +35,23 @@ A system claiming AOP conformance should:
 Add this badge to your project:
 
 ```markdown
-[![AOP v1.0 Compliant](https://img.shields.io/badge/AOP-v1.0%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v1.0)
+[![AOP v0.5 Compliant](https://img.shields.io/badge/AOP-v0.5%20compliant-blue?style=flat-square)](https://agentoperationprotocol.org/v0.5)
 ```
+
+## Relation to Adjacent Standards
+
+AOP is the behavioral governance layer. It sits above transport and below application logic — complementary to these standards, not competing.
+
+| Standard | Role | Relationship to AOP |
+|---|---|---|
+| **MCP** (Model Context Protocol) | Transport and tool-calling layer | AOP governs how actors behave once connected; MCP governs how they connect and invoke tools. Use both. |
+| **A2A** (Agent-to-Agent Protocol) | Agent coordination and messaging | A2A defines how agents communicate with each other; AOP defines the behavioral contract each agent must honor when acting on a shared system. |
+| **CloudEvents** | Event schema and envelope standard | AOP's Law 4 requires structured event emission. AOP events are compatible with CloudEvents but do not require it — any structured event format satisfies the law. |
+| **OAuth / OpenID Connect** | Identity and authorization | AOP assumes identity is already established (out of scope). Law 5 requires capability checks at action time; the underlying grant mechanism (OAuth scopes, OIDC claims, etc.) is the implementor's choice. |
 
 ## Reference Implementation
 
-[OKL (Operational Kernel Layer)](https://github.com/ideacrafterslabs/okl) is the reference implementation of AOP v1.0.
+We're building a reference implementation. Not ready to name it yet — but the protocol is open and ready for feedback now.
 
 ## License
 
